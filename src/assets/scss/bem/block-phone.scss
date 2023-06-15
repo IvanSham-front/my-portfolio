@@ -1,0 +1,71 @@
+.block-phone {
+	display: flex;
+}	
+
+.block-phone__number {
+	@include font(18px, bold);
+	margin-top: -3px;
+	margin-right: -3px;
+	@media (min-width: $medium) {
+		font-size: 25px;
+		margin-top: 0;
+		margin-right: 0;
+		letter-spacing: 0.4px;
+
+	}
+	&:hover {
+		color: $blue;
+		transition: .2s;
+	}
+}
+
+.block-phone__button {
+	margin-left: 38px;
+	padding: 0;
+	width: 28px;
+	min-height: 28px;
+	background-color: $white;
+	border: 1px solid $blue;
+	border-radius: 50%;
+	&:hover {
+		background: $blue;
+	}
+	@media (min-width: $medium) {
+		margin-left: 32px;
+		margin-top: -9px;
+		width: 205px;
+		min-height: 46px;
+		background-image: none;
+		border: 1px solid $blue;
+		border-radius: 6px;
+	}
+	@media (min-width: $big) {
+		margin-top: -8px;
+		width: 210px;
+		margin-left: 28px;
+	}
+}
+
+.block-phone__icon {
+	fill: $blue;
+	width: 27px;
+	height: 27px;
+	padding: 7px;
+	padding-bottom: 2px;
+	margin-top: -4px;
+	margin-right: -2px;
+	&:hover {
+		fill: $white;
+	}
+	@media (min-width: $medium) {
+		display: none;
+	}
+}
+
+.block-phone__text {
+	display: none;
+	@media (min-width: $medium) {
+		display: inline-block;
+		padding: 14px;
+	}	
+}

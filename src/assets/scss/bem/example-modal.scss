@@ -1,0 +1,71 @@
+.example-modal {
+	max-width: $big;
+  padding: 20px;
+}
+
+.example-modal__title {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.example-modal__description {
+  margin: 0 auto 20px;
+  max-width: 80%;
+  color: $grey;
+}
+
+.example-modal__link {
+  margin: 20px auto 0;
+  max-width: 200px;
+}
+
+.modal-example {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 40px;
+}
+
+.modal-example__desktop-only {
+  justify-content: center;
+}
+
+.modal-example__photo-mobile {
+  position: absolute;
+  max-width: 22%;
+  bottom: 0%;
+  left: 12%;
+  z-index: 2;
+}
+
+
+.modal-example__photo-desktop {
+  position: relative;
+  --size: 800px;
+  --aspect-ratio: 1.7;
+  --height: calc(var(--size) / var(--aspect-ratio));
+  width: var(--size);
+  height: var(--height)
+
+}
+
+.modal-example__photo-desktop:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('src/assets/img/macbook_background.png'); /* Путь к изображению рамки макбука */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-example__photo-desktop img {
+  position: absolute;
+  top: calc(var(--height) - 90%); /* Отступ для изображения скриншота */
+  left: calc(var(--size) - 89.5%);
+  width: calc(var(--size) - 20%); /* Размер экрана макбука */
+  object-fit: cover;
+  
+}

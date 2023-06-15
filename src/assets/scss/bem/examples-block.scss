@@ -1,0 +1,32 @@
+.examples-block__title {
+	padding-top: 93px;
+	@media (min-width: $medium) {
+		padding-top: 193px;
+	}
+	@media (min-width: $big) {
+		padding-top: 192px;
+		padding-right: 7px;
+	}
+}
+
+.examples__list {
+	padding-top: 39px;
+	@include flex-box(column nowrap, flex-start);
+	gap: 12rem;
+	@media (min-width: $medium) {
+		padding-top: 70px;
+	}
+	@media (min-width: $big) {
+		padding-top: 70px;
+		margin-bottom: 30px;
+	}
+}
+
+.examples__item {
+	width: 80%;
+	&:nth-child(2n) {
+		align-self: flex-end;
+	};
+}
+
+
