@@ -1,0 +1,38 @@
+.callback-modal {
+  background-color: #ffffff;
+  padding: 10px;
+  max-width: 300px;
+  @media (min-width: $small) {
+    padding: 20px;
+    max-width: inherit;
+  }
+}
+
+.callback-modal__title {
+  margin: 0 auto;
+
+  @media (min-width: $medium) {
+    font-size: 40px;
+    max-width: 70%;
+  }
+}
+
+
+.callback-modal__form {
+  margin-top: 20px;
+}
+
+.callback-form {
+  @include flex-box(column nowrap, space-between);
+  align-items: center;
+  gap: 1em;
+  padding: 0;
+
+  @media (min-width: $small) {
+    padding: 0 3em;
+  }
+}
+
+.callback-form__button {
+  width: 250px;
+}

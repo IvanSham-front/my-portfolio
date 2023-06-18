@@ -27,7 +27,25 @@
 		&:hover {
 			color: $white;
 			background-color: $blue;
-			transition: .4s;
 		}
+	}
+}
+
+.btn_pink.dark {
+	background-color: inherit;
+	&:hover {
+		color: $darkThemeBackground
+	}
+}
+
+.toggle-theme {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	& svg {
+		max-width: 100%;
+		max-height: 100%;
 	}
 }

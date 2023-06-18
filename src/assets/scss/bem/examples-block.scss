@@ -1,10 +1,24 @@
+.examples-block {
+	background: url('src/assets/img/background-tags.jpg');
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.examples-block.dark {
+	background-image: url('src/assets/img/background-tags-dark.jpg');
+}
+
+
+.examples-block__section {
+	background: none;
+}
+
 .examples-block__title {
-	padding-top: 93px;
+	padding-top: 63px;
 	@media (min-width: $medium) {
-		padding-top: 193px;
+		padding-top: 63px;
 	}
 	@media (min-width: $big) {
-		padding-top: 192px;
 		padding-right: 7px;
 	}
 }
@@ -12,7 +26,10 @@
 .examples__list {
 	padding-top: 39px;
 	@include flex-box(column nowrap, flex-start);
-	gap: 12rem;
+	gap: 3rem;
+	@media (min-width: $medium) {
+		gap: 9rem;
+	}
 	@media (min-width: $medium) {
 		padding-top: 70px;
 	}
@@ -23,10 +40,14 @@
 }
 
 .examples__item {
-	width: 80%;
-	&:nth-child(2n) {
-		align-self: flex-end;
-	};
+	width: 100%;
+	position: relative;
+	@media (min-width: $small) {
+		width: 80%;
+		&:nth-child(2n) {
+			align-self: flex-end;
+		};
+	}
 }
 
 

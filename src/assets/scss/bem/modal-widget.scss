@@ -18,6 +18,12 @@
   left: 0;
   background: rgba($color: #000000, $alpha: .5);
   z-index: 3;
+  animation: overlayShow;
+  animation-duration: .3s;
+}
+
+.modal-overlay.close {
+  animation-name: overlayHide;
 }
 
 .modal-container {
@@ -26,4 +32,57 @@
   padding: 10px;
   z-index: 5;
   border-radius: 6px;
+  animation-name: containerShow;
+  animation-duration: .3s;
+  max-height: 99vh;
+  overflow: auto;
+}
+
+.modal-container.dark {
+  background: $darkThemeBackground;
+}
+
+.modal-container.close {
+  animation-name: containerHide;
+  
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayHide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes containerShow {
+  from {
+    transform: scale(0.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes containerHide {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
 }

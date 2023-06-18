@@ -1,29 +1,58 @@
 .example-modal {
-	max-width: $big;
-  padding: 20px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+
+  @media (min-width: $small) {
+    max-width: calc($small - 50px);
+    padding: 20px;
+  }
+
+  @media (min-width: $medium) {
+    max-width: calc($medium - 50px);
+  }
 }
 
 .example-modal__title {
-  font-size: 30px;
-  padding: 20px;
+  font-size: 20px;
+  padding-bottom: 10px;
+
+  @media (min-width: $small) {
+    font-size: 30px;
+    padding: 20px;
+  }
 }
 
 .example-modal__description {
   margin: 0 auto 20px;
-  max-width: 80%;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
   color: $grey;
+  text-align: center;
+  font-size: 14px;
+  @media (min-width: $small) {
+    max-width: 80%;
+    font-size: 16px;
+  }
 }
 
 .example-modal__link {
+  padding: 10px;
   margin: 20px auto 0;
   max-width: 200px;
+  @media (min-width: $small) {
+    padding: 18px;
+  }
 }
 
 .modal-example {
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  padding: 0 40px;
+
+  @media (min-width: $small) {
+    justify-content: flex-end;
+    padding: 0 40px;
+  }
 }
 
 .modal-example__desktop-only {
@@ -34,19 +63,40 @@
   position: absolute;
   max-width: 22%;
   bottom: 0%;
-  left: 12%;
   z-index: 2;
+  left: 0%;
+
+  @media (min-width: $small) {
+    left: 12%;
+  }
+
+  @media (min-width: $medium) {
+    left: 5%;
+  }
 }
 
 
 .modal-example__photo-desktop {
   position: relative;
-  --size: 800px;
+  --size-small: 280px;
+  --size-medium: 500px;
+  --size-big: 760px;
   --aspect-ratio: 1.7;
-  --height: calc(var(--size) / var(--aspect-ratio));
-  width: var(--size);
-  height: var(--height)
+  --height-small: calc(var(--size-small) / var(--aspect-ratio));
+  --height-medium: calc(var(--size-medium) / var(--aspect-ratio));
+  --height-big: calc(var(--size-big) / var(--aspect-ratio));
+  width: var(--size-small);
+  height: var(--height-small);
 
+  @media (min-width: $small) {
+    width: var(--size-medium);
+    height: var(--height-medium);
+  }
+
+  @media (min-width: $medium) {
+    width: var(--size-big);
+    height: var(--height-big);
+  }
 }
 
 .modal-example__photo-desktop:before {
@@ -56,16 +106,28 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('src/assets/img/macbook_background.png'); /* Путь к изображению рамки макбука */
+  background-image: url('src/assets/img/macbook_background.png');
+  /* Путь к изображению рамки макбука */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .modal-example__photo-desktop img {
   position: absolute;
-  top: calc(var(--height) - 90%); /* Отступ для изображения скриншота */
-  left: calc(var(--size) - 89.5%);
-  width: calc(var(--size) - 20%); /* Размер экрана макбука */
+  top: calc(var(--height-small) - 90%);
+  left: calc(var(--size-small) - 89.5%);
+  width: calc(var(--size-small) - 20%);
   object-fit: cover;
-  
+
+  @media (min-width: $small) {
+    top: calc(var(--height-medium) - 90%);
+    left: calc(var(--size-medium) - 89.5%);
+    width: calc(var(--size-medium) - 20%);
+  }
+
+  @media (min-width: $medium) {
+    top: calc(var(--height-big) - 90%);
+    left: calc(var(--size-big) - 89.5%);
+    width: calc(var(--size-big) - 20%);
+  }
 }

@@ -8,7 +8,7 @@
       :navigation="true"
       :modules="modules"
       :loop="true"
-      :autoplay="{delay: 3000, disableOnInteraction: false}"
+      :autoplay="{delay: 5000, disableOnInteraction: false}"
     >
       <swiper-slide v-for="(photo) in currentExample.photos" :key="photo.desktop">
         <div class="modal-example" :class="!photo.mobile && 'modal-example__desktop-only'">
@@ -57,13 +57,20 @@ export default {
 
 <style>
 .swiper-button-next {
-  background: url("src/assets/img/arrow-right.png") center no-repeat;
+  background: url("src/assets/img/arrow-right.svg") center no-repeat;
   width: 62px;
   height: 62px;
 }
 .swiper-button-prev {
-  background: url("src/assets/img/arrow-left.png") center no-repeat;
+  background: url("src/assets/img/arrow-left.svg") center no-repeat;
   width: 62px;
   height: 62px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: none;
+  }
 }
 </style>

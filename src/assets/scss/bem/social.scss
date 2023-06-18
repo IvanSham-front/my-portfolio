@@ -8,6 +8,7 @@
 	width: 42px;
 	height: 31px;
 	fill: $grey;
+	transition: .3s;
 }
 
 .social__icon_vk {
@@ -17,22 +18,26 @@
 }
 
 
-.social__icon_facebook {
+.social__icon_telegram {
+	margin-top: 1px;
+	&:hover {
+		fill: $tgBlue;
+	}
+}
+
+.social__icon_github {
+	height: 36px;
 	margin-top: -2px;
 	&:hover {
+		fill: $black;
+	}
+}
+
+.social__icon_linkedin {
+	height: 42px;
+	margin-top: -4px;
+	&:hover {
 		fill: $vkFbBlue;
-	}
-}
-
-.social__icon_twitter {
-	&:hover {
-		fill: $twitterBlue;
-	}
-}
-
-.social__icon_instagram {
-	&:hover {
-		fill: $blue;
 	}
 }
 
@@ -42,6 +47,6 @@
 }
 
 .social__li_twitter {
-	margin-right: 17px;
+	margin-right: 9px;
 	margin-left: 10px;
 }

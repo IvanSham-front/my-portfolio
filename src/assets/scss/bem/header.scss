@@ -1,8 +1,10 @@
 .header__inner {
 		padding-top: 30px;
 		position: relative;
+		align-items: center;
 		@include flex-box(row nowrap, space-between);
 		@media (min-width: $medium) {
+			align-items: start;
 			padding-top: 37px;
 		}
 		@media (min-width: $big) {

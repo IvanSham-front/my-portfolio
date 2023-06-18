@@ -33,8 +33,8 @@ export default [
     id: "SDB",
     title: "СберДискБизнес",
     visible: false,
-    description: 
-    `СбердискБизнес – проект облачного хранилища для бизнеса, в стадии разработки. 
+    description:
+      `СбердискБизнес – проект облачного хранилища для бизнеса, в стадии разработки. 
     Я занимаюсь фронтенд-разработкой на Vue.js, используя Vuex, Vue Router и другие сопутствующие инструменты.
      Основной фокус проекта – обеспечение безопасного хранения и обмена данных для предприятий. 
      Будущий функционал включает надежное хранение файлов, 
@@ -63,8 +63,8 @@ export default [
     title: "Сайт современной эзотерики",
     visible: false,
     link: 'https://lk.change-me.ru/',
-    description: 
-    `ЭкспертыВэб – проект сайта для экспертов в эзотерике, разработанный на React с использованием
+    description:
+      `ЭкспертыВэб – проект сайта для экспертов в эзотерике, разработанный на React с использованием
      Material-UI и других сопутствующих технологий. 
      Мы интегрировали веб-сокеты для создания чата и видеотрансляции. 
      Наша цель – предоставить экспертам платформу для общения с клиентами в режиме реального
@@ -139,5 +139,25 @@ export default [
       },
     ]
   },
-
+  {
+    id: "photogram",
+    title: 'Мой пет-проект Photogram',
+    visible: false,
+    link: 'https://nickeny-github-io.vercel.app/',
+    description: `
+      Photogram - пет-проект на React, использующий API Unsplash. 
+      Просматривайте фотографии, логиньтесь через Unsplash, ставьте лайки и наслаждайтесь 
+      ленивой загрузкой изображений. 
+      Быстрая и удобная платформа для вдохновения фотографией.`,
+    photos: [
+      {
+        desktop: "src/assets/img/examples/photogram-1.jpeg",
+        mobile: "src/assets/img/examples/photogram-1-mob.png"
+      },
+      {
+        desktop: "src/assets/img/examples/photogram-2.jpeg",
+        mobile: "src/assets/img/examples/photogram-2-mob.png"
+      },
+    ]
+  }
 ]

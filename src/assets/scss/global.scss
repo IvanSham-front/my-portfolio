@@ -2,16 +2,37 @@
 body {
 	min-width: 320px;    
 	margin: 0;
-	font-family: "Roboto", "Arial",  sans-serif;
+	font-family: "SF Pro Display", "Roboto",  sans-serif;
 	font-size: 16px;
 	color: #000000;
 	background-color: $white;
 	line-height: normal;
 	overflow-x: hidden;
+	transition: .3s;
 }
 
-body.modal-active {
+body.dark {
+	background-color: $darkThemeBackground;
+	color: $white;
+}
+
+.modal-active {
 	overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+	width: 3px;
+	/* ширина для вертикального скролла */
+	border-radius: 50px;
+	background: #fcfcfc;
+}
+*::-webkit-scrollbar-thumb {
+  background: #BEC0C2;
+  box-shadow: 0px 0px 5px rgba(39, 49, 66, 0.08);
+  border-radius: 50px;
+  &:hover {
+    background: #273142;
+  }
 }
 
 a {

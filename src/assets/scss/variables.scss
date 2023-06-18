@@ -6,9 +6,10 @@ $big: 1200px;
 
 //Цвета
 $white: #f7f7f7;
-$orange: #5acbff;
-$orangeHover: #5a89ff;
-$blue: #5acbff;
+$darkThemeBackground: #1f1f1f;
+$orange: #0079a4;
+$orangeHover: #0070ab;
+$blue: #0079a4;
 $grey: #8993ad;
 $black: #000000;
 $overlay: rgba(0, 0, 0, 0.7);
@@ -16,6 +17,10 @@ $grey-points: #ebebeb;
 $gradient: linear-gradient(to left, #004c9e, #00d366);
 $vkFbBlue: #5d84ae;
 $twitterBlue: #00acee;
+$tgBlue: #2AABEE;
 
 //Контент 
 $star: "\002A";
+
+// Тень
+$shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);

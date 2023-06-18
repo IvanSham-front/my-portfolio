@@ -14,7 +14,7 @@
 }	
 
 .skills-list__li {
-	@include flex-box(column nowrap, space-between);
+	@include flex-box(column nowrap, flex-start);
 	align-items: center;
 	max-width: 230px;
 	margin: 0 auto 47px;

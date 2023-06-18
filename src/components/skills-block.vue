@@ -1,29 +1,39 @@
 <template>
-  <section class="page-section skills-block" ref="skillsElem">
-    <h2 class="title page-section__title skills-block__title" ref="skillsElem" id="services-js">Что я делаю</h2>
-    <svg class="visually-hidden">
-      <linearGradient id="linearGradient" x1="100%" y1="0" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#00d366"></stop>
-        <stop offset="100%" stop-color="#5a89ff"></stop>
-      </linearGradient>
-    </svg>
-    <transition-group
-      class="skills-list skills-block__list"
-      @click="displaySkills"
-      tag="ul"
-      name="display-skill-block"
-    >
-      <li
-        v-for="(item, index) in skillsItems"
-        :key="index"
-        :class="['skills-list__li', {'skills-list__li_show': item.visible}]"
+  <section class="page-section skills-block" :class="darkTheme && 'dark'" ref="skillsElem">
+    <div class="fixed-container">
+      <h2
+        class="title page-section__title skills-block__title"
+        ref="skillsElem"
+        id="services-js"
+      >Что я делаю</h2>
+      <svg class="visually-hidden">
+        <linearGradient id="linearGradient" x1="100%" y1="0" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00d366"></stop>
+          <stop offset="100%" stop-color="#5a89ff"></stop>
+        </linearGradient>
+      </svg>
+      <transition-group
+        class="skills-list skills-block__list"
+        @click="displaySkills"
+        tag="ul"
+        name="display-skill-block"
       >
-        <component :is="item.icon" class="skills-list__icon" fill="url(#linearGradient)"></component>
-        <p class="skills-list__text">{{ item.text }}</p>
-      </li>
-    </transition-group>
+        <li
+          v-for="(item, index) in skillsItems"
+          :key="index"
+          :class="['skills-list__li', {'skills-list__li_show': item.visible}]"
+        >
+          <component :is="item.icon" class="skills-list__icon" fill="url(#linearGradient)"></component>
+          <p class="skills-list__text">{{ item.text }}</p>
+        </li>
+      </transition-group>
 
-    <a class="btn page-section__button" id="buttonFindCost-js" href="#portfolio-js">Посмотреть примеры</a>
+      <a
+        class="btn page-section__button"
+        id="buttonFindCost-js"
+        href="#portfolio-js"
+      >Посмотреть примеры</a>
+    </div>
   </section>
 </template>
 
@@ -36,6 +46,7 @@ import VueIcon from "./svg/sprites/vue-icon.vue";
 import TsIcon from "./svg/sprites/ts-icon.vue";
 import NextJsIcon from "./svg/sprites/next-js-icon.vue";
 import BemIcon from "./svg/sprites/bem-icon.vue";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "skills-block",
@@ -46,42 +57,42 @@ export default {
         {
           text: "Верстка лендинг-страниц и сайтов любой сложности",
           visible: false,
-          icon: 'Icon1'
+          icon: "Icon1"
         },
         {
           text: "Адаптивная верстка под все браузеры и устройства",
           visible: false,
-          icon: 'Icon2'
+          icon: "Icon2"
         },
         {
           text: "Верстка по методологии БЭМ",
           visible: false,
-          icon: 'BemIcon'
+          icon: "BemIcon"
         },
         {
           text: "Управление состоянием приложения c Redux",
           visible: false,
-          icon: 'ReduxIcon'
+          icon: "ReduxIcon"
         },
         {
           text: "Разработка и доработка веб-приложений на React.js",
           visible: false,
-          icon: 'ReactIcon'
+          icon: "ReactIcon"
         },
         {
           text: "Разработка и доработка веб-приложений на Vue.js",
           visible: false,
-          icon: 'VueIcon'
+          icon: "VueIcon"
         },
         {
           text: "Разработка веб-приложений с использованием TypeScript",
           visible: false,
-          icon: 'TsIcon'
+          icon: "TsIcon"
         },
         {
           text: "Разработка c использованием Next.js",
           visible: false,
-          icon: 'NextJsIcon'
+          icon: "NextJsIcon"
         }
       ]
     };
@@ -105,17 +116,20 @@ export default {
       });
     },
     onElementObserved(entries) {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.displaySkills();
         }
       });
     }
   },
+  computed: {
+    ...mapGetters(['darkTheme'])
+  },
   mounted() {
     this.observer = new IntersectionObserver(this.onElementObserved, {
       root: null,
-      threshold: .3
+      threshold: 0.3
     });
     setTimeout(() => {
       this.observer.observe(this.$refs.skillsElem);

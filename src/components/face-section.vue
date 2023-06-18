@@ -1,5 +1,5 @@
 <template>
-  <section class="face" ref="faceRootEl">
+  <section class="face fixed-container" ref="faceRootEl">
     <figure class="face__figure">
       <div class="face__ellipse-background" ref="ellipseEl"></div>
 
@@ -49,7 +49,7 @@
         </ul>
       </div>
 
-      <figcaption class="face__text">
+      <figcaption class="face__text" :class="darkTheme && 'dark'">
         <h1 class="title face__title">
           Иван Шаменков
           <span class="face__conception">Frontend-разработчик</span>
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: "face-section",
   methods: {
@@ -78,11 +79,13 @@ export default {
       const x =  - (coordX * layerSpeed).toFixed(2);
       const y = - (coordY * layerSpeed).toFixed(2);
       flyingElems.setAttribute('style', `transform: translate(${x}px, ${y}px);`)
-    
     }
   },
   mounted() {
     this.$refs.faceRootEl.addEventListener('mousemove', this.parralaxEffect)
+  },
+  computed: {
+    ...mapGetters(['darkTheme'])
   }
 };
 </script>

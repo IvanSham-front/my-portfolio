@@ -2,6 +2,10 @@
 	background-color: $white;
 }
 
+.page-section.dark {
+	background-color: $darkThemeBackground;
+}
+
 .page-section__title {
 	text-align: center;
 	@media (min-width: $medium) {

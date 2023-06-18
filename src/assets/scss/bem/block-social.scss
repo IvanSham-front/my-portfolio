@@ -6,7 +6,7 @@
 
 .block-social__button {
 	width: 280px;
-	margin-bottom: 54px;
+	margin-bottom: 16px;
 	@media (min-width: $medium) {
 		max-width: 245px;
 		margin-top: -5px;
@@ -19,3 +19,6 @@
 	}
 }
 
+.block-social__button.dark:hover {
+	background: $orange;
+}

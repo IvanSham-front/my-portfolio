@@ -1,5 +1,10 @@
 .footer {
 	color: $grey;
+	background-color: white;
+}
+
+.footer.dark {
+	background-color: $darkThemeBackground;
 }
 
 .footer__inner {

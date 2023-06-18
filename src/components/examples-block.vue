@@ -1,28 +1,29 @@
 <template>
-  <section class="page-section examples-block">
-    <h2 class="title page-section__title examples-block__title" id="portfolio-js">Примеры моих работ</h2>
-    <div class="examples">
-      <ul class="examples__list">
-        <li class="examples__item" v-for="(example, index) in examples" :key="index">
-          <figure
-            :class="['example', {'example_open': example.visible}]"
-            :id="example.id"
-            ref="example"
-            @click="openAboutExample(example)"
-          >
-            <figcaption class="example__title" v-if="example.visible">{{ example.title }}</figcaption>
-            <img :src="example.photos[0].desktop" class="example__img">
-          </figure>
-        </li>
-      </ul>
-    </div>
-
-    <a class="btn page-section__button" id="buttonOrderProject-js" href="#">Заказать проект</a>
-  </section>
+  <div class="examples-block" :class="darkTheme && 'dark'">
+    <section class="page-section fixed-container examples-block__section">
+      <h2 class="title page-section__title examples-block__title" id="portfolio-js">Примеры моих работ</h2>
+      <div class="examples">
+        <ul class="examples__list">
+          <li class="examples__item" v-for="(example, index) in examples" :key="index">
+  
+            <figure
+              :class="['example', {'example_open': example.visible}]"
+              :id="example.id"
+              ref="example"
+              @click="openAboutExample(example)"
+            >
+              <figcaption class="example__title" v-if="example.visible">{{ example.title }}</figcaption>
+              <img :src="example.photos[0].desktop" class="example__img">
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import examples from "../source/examples";
 
 export default {
@@ -49,6 +50,9 @@ export default {
       this.SET_CURRENT_EXAMPLE(example);
       this.SET_MODAL("example-modal");
     }
+  },
+  computed: {
+    ...mapGetters(['darkTheme'])
   },
   mounted() {
     this.observer = new IntersectionObserver(this.onElementObserved, {

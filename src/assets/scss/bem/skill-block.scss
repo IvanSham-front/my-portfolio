@@ -1,3 +1,10 @@
+.skills-block {
+	box-shadow: $shadow;
+	padding-bottom: 2rem;
+	z-index: 2;
+  position: relative;
+}
+
 .skills-block__title {
 	padding-top: 43px;
 	@media (min-width: $medium) {
