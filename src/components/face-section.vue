@@ -7,20 +7,20 @@
         <source
           media="(min-width: 1024px)"
           type="image/webp"
-          srcset="../assets/img/human-tablet.webp 1x, ../assets/img/human-tablet-2x.webp 2x"
+          srcset="/img/human-tablet.webp 1x, /img/human-tablet-2x.webp 2x"
         >
 
-        <source type="image/webp" srcset="../assets/img/human-mobile.webp 1x, ../assets/img/human-mobile-2x.webp 2x">
+        <source type="image/webp" srcset="/img/human-mobile.webp 1x, /img/human-mobile-2x.webp 2x">
 
         <source
           media="(min-width: 1024px)"
-          srcset="../assets/img/human-tablet.png 1x, ../assets/img/human-tablet-2x.png 2x"
+          srcset="/img/human-tablet.png 1x, /img/human-tablet-2x.png 2x"
         >
 
         <img
           class="face__picture-human"
-          src="../assets/img/human-mobile.png"
-          srcset="../assets/img/human-mobile-2x.png 2x"
+          src="/img/human-mobile.png"
+          srcset="/img/human-mobile-2x.png 2x"
           alt="Иван Шаменков"
         >
       </picture>

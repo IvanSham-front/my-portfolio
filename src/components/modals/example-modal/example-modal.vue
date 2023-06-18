@@ -57,12 +57,12 @@ export default {
 
 <style>
 .swiper-button-next {
-  background: url("src/assets/img/arrow-right.svg") center no-repeat;
+  background: url("/img/arrow-right.svg") center no-repeat;
   width: 62px;
   height: 62px;
 }
 .swiper-button-prev {
-  background: url("src/assets/img/arrow-left.svg") center no-repeat;
+  background: url("/img/arrow-left.svg") center no-repeat;
   width: 62px;
   height: 62px;
 }

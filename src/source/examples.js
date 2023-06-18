@@ -12,20 +12,20 @@ export default [
       Горжусь своим вкладом в создание удобного инструмента управления налоговыми обязательствами.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/nalog-1.jpeg",
-        mobile: "src/assets/img/examples/nalog-1-mob.png"
+        desktop: "/img/examples/nalog-1.jpeg",
+        mobile: "/img/examples/nalog-1-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/nalog-2.jpeg",
-        mobile: "src/assets/img/examples/nalog-2-mob.png"
+        desktop: "/img/examples/nalog-2.jpeg",
+        mobile: "/img/examples/nalog-2-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/nalog-3.jpeg",
-        mobile: "src/assets/img/examples/nalog-3-mob.png"
+        desktop: "/img/examples/nalog-3.jpeg",
+        mobile: "/img/examples/nalog-3-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/nalog-4.jpeg",
-        mobile: "src/assets/img/examples/nalog-4-mob.png"
+        desktop: "/img/examples/nalog-4.jpeg",
+        mobile: "/img/examples/nalog-4-mob.png"
       }
     ]
   },
@@ -42,19 +42,19 @@ export default [
      Наша команда стремится создать эффективное и интуитивно понятное решение для бизнеса.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/sdb-1.jpeg"
+        desktop: "/img/examples/sdb-1.jpeg"
       },
       {
-        desktop: "src/assets/img/examples/sdb-2.jpeg"
+        desktop: "/img/examples/sdb-2.jpeg"
       },
       {
-        desktop: "src/assets/img/examples/sdb-3.jpeg"
+        desktop: "/img/examples/sdb-3.jpeg"
       },
       {
-        desktop: "src/assets/img/examples/sdb-5.jpeg"
+        desktop: "/img/examples/sdb-5.jpeg"
       },
       {
-        desktop: "src/assets/img/examples/sdb-6.jpeg"
+        desktop: "/img/examples/sdb-6.jpeg"
       }
     ]
   },
@@ -73,16 +73,16 @@ export default [
        и искателей духовного развития.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/change-me-1.jpeg",
-        mobile: "src/assets/img/examples/change-me-1-mob.png"
+        desktop: "/img/examples/change-me-1.jpeg",
+        mobile: "/img/examples/change-me-1-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/change-me-2.jpeg",
-        mobile: "src/assets/img/examples/change-me-2-mob.png"
+        desktop: "/img/examples/change-me-2.jpeg",
+        mobile: "/img/examples/change-me-2-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/change-me-3.jpeg",
-        mobile: "src/assets/img/examples/change-me-3-mob.png"
+        desktop: "/img/examples/change-me-3.jpeg",
+        mobile: "/img/examples/change-me-3-mob.png"
       },
     ]
   },
@@ -94,24 +94,24 @@ export default [
     Мы стремимся предоставить клиентам удобный и инновационный способ выбора и заказа услуг по установке окон и балконов.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/okna-1.jpeg",
-        mobile: "src/assets/img/examples/okna-1-mob.png"
+        desktop: "/img/examples/okna-1.jpeg",
+        mobile: "/img/examples/okna-1-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/okna-2.jpeg",
-        mobile: "src/assets/img/examples/okna-2-mob.png"
+        desktop: "/img/examples/okna-2.jpeg",
+        mobile: "/img/examples/okna-2-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/okna-5.jpeg",
-        mobile: "src/assets/img/examples/okna-5-mob.png"
+        desktop: "/img/examples/okna-5.jpeg",
+        mobile: "/img/examples/okna-5-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/okna-6.jpeg",
-        mobile: "src/assets/img/examples/okna-6-mob.png"
+        desktop: "/img/examples/okna-6.jpeg",
+        mobile: "/img/examples/okna-6-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/okna-7.jpeg",
-        mobile: "src/assets/img/examples/okna-7-mob.png"
+        desktop: "/img/examples/okna-7.jpeg",
+        mobile: "/img/examples/okna-7-mob.png"
       }
     ]
   },
@@ -126,16 +126,16 @@ export default [
       В рамках проекта я занимался версткой сайта с использованием HTML и CSS.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/top-3d-1.jpeg",
-        mobile: "src/assets/img/examples/top-3d-1-mob.png"
+        desktop: "/img/examples/top-3d-1.jpeg",
+        mobile: "/img/examples/top-3d-1-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/top-3d-2.jpeg",
-        mobile: "src/assets/img/examples/top-3d-2-mob.png"
+        desktop: "/img/examples/top-3d-2.jpeg",
+        mobile: "/img/examples/top-3d-2-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/top-3d-3.jpeg",
-        mobile: "src/assets/img/examples/top-3d-3-mob.png"
+        desktop: "/img/examples/top-3d-3.jpeg",
+        mobile: "/img/examples/top-3d-3-mob.png"
       },
     ]
   },
@@ -151,12 +151,12 @@ export default [
       Быстрая и удобная платформа для вдохновения фотографией.`,
     photos: [
       {
-        desktop: "src/assets/img/examples/photogram-1.jpeg",
-        mobile: "src/assets/img/examples/photogram-1-mob.png"
+        desktop: "/img/examples/photogram-1.jpeg",
+        mobile: "/img/examples/photogram-1-mob.png"
       },
       {
-        desktop: "src/assets/img/examples/photogram-2.jpeg",
-        mobile: "src/assets/img/examples/photogram-2-mob.png"
+        desktop: "/img/examples/photogram-2.jpeg",
+        mobile: "/img/examples/photogram-2-mob.png"
       },
     ]
   }
