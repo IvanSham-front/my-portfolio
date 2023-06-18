@@ -1,7 +1,7 @@
 <template>
   <div class="modal-widget" v-if="modal">
     <div class="modal-overlay" @click="close"></div>
-    <component :is="modal" class="modal-container" :class="darkTheme && 'dark'"></component>
+    <component :is="modal" class="modal-container" :class="darkTheme && 'dark'" @close="close"></component>
   </div>
 </template>
 
@@ -13,14 +13,15 @@ import callbackModal from "./callback-modal/callback-modal.vue";
 export default {
   name: "modal-widget",
   components: {
-    exampleModal, callbackModal
+    exampleModal,
+    callbackModal
   },
   computed: {
     ...mapGetters(["modal", "darkTheme"])
   },
   watch: {
     modal() {
-      const body = document.querySelector('html');
+      const body = document.querySelector("html");
       if (this.modal) {
         body.style.overflow = "hidden";
         body.style.paddingRight = this.scrollWidth() + "px";
