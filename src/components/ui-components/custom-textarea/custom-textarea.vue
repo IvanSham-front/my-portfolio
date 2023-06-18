@@ -73,13 +73,9 @@ export default {
 
 
 .label {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 17px;
   color: #bec0c2;
   position: absolute;
+  background: #f9f9f9;
   top: 15px;
   left: 20px;
   padding: 0;
@@ -94,6 +90,7 @@ export default {
   height: 11px;
   display: flex;
   padding: 0 6px;
+  font-size: 12px
 }
 
 .textarea.dark:focus + .label,
